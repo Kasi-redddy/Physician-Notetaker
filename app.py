@@ -2,6 +2,9 @@ import streamlit as st
 import spacy
 import re
 from transformers import pipeline
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
+
 
 @st.cache_resource
 def load_nlp():
